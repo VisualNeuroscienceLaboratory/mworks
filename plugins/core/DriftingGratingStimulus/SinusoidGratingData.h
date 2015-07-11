@@ -14,8 +14,8 @@
 
 class SinusoidGratingData : public GratingData {
 public:
-	SinusoidGratingData(const shared_ptr <Variable> &_data_sample_size);
-	const std::string getName() const;
+    SinusoidGratingData(const shared_ptr <Variable> &_data_sample_size);
+    const std::string getName() const;
 };
 
-#endif 
+#endif

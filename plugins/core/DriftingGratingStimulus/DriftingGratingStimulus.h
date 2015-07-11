@@ -28,32 +28,36 @@ private:
 	shared_ptr<Variable> height;
 	
 	shared_ptr<Variable> rotation; // planar rotation added in for free
-	shared_ptr<Variable> alpha_multiplier;
+    shared_ptr<Variable> contrast;
+    shared_ptr<Variable> opacity;
 	
 	shared_ptr<Variable> direction_in_degrees;
 	shared_ptr<Variable> spatial_frequency;
-	shared_ptr<Variable> speed;
+    shared_ptr<Variable> temporal_frequency;
 	shared_ptr<Variable> starting_phase;
 	
-	shared_ptr<Mask> mask;
-	shared_ptr<GratingData> grating;
+    shared_ptr<GratingData> grating;
+    shared_ptr<OverlayData> overlay;
+    shared_ptr<Mask> mask;
 	
-	vector<GLuint> mask_textures;
-	vector<GLuint> grating_textures;
-    
+    vector<GLuint> grating_textures;
+    vector<GLuint> mask_textures;
+	
 	float last_phase;
 
 public:
     static const std::string DIRECTION;
     static const std::string STARTING_PHASE;
-    static const std::string FREQUENCY;
-    static const std::string SPEED;
+    static const std::string SPATIAL_FREQUENCY;
+    static const std::string TEMPORAL_FREQUENCY;
     static const std::string GRATING_TYPE;
     static const std::string MASK;
     static const std::string GRATING_SAMPLE_RATE;
     static const std::string INVERTED;
     static const std::string STD_DEV;
     static const std::string MEAN;
+    static const std::string CONTRAST;
+    static const std::string OPACITY;
     
     static void describeComponent(ComponentInfo &info);
     
