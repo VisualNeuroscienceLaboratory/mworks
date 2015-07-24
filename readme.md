@@ -24,9 +24,15 @@ Click "Commit to master", located at the bottom when on the "Changes" tab.
 
 Finally click the "Sync" button at the top right of the GitHub desktop program.
 
-### Are there issues with have the same file open in multiple places (e.g. editing locally AND directly online, or two separate users editing locally)? ###
+### Are there possible concurrency issues? ###
+
+By this, we mean issues with having the same file open in multiple places (e.g. editing locally AND directly online, or two separate users editing locally).
 
 When you go to commit and changes have been made (& committed) elsewhere on a file that you're attemping to commit, you'll be warned that changes have been made. This will give you a chance to check out those changes and decide which version to keep/edit.
+
+### How to undo a commit ##
+
+In GitHub desktop, go to the "History" tab. Find the change you wish to undo ("revert"). Above the changes on the right, click the gear wheel (settings) and select "Revert this Commit". This leaves everything else in the branch untouched except the commit that you're reverting. If you instead choose "Roll back to this Commit", everything committed to the branch since this update will be reverted.
 
 ### How to write a plug-in ###
 
