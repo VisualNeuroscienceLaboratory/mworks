@@ -34,6 +34,12 @@ When you go to commit and changes have been made (& committed) elsewhere on a fi
 
 In GitHub desktop, go to the "History" tab. Find the change you wish to undo ("revert"). Above the changes on the right, click the gear wheel (settings) and select "Revert this Commit". This leaves everything else in the branch untouched except the commit that you're reverting. If you instead choose "Roll back to this Commit", everything committed to the branch since this update will be reverted.
 
+### How to use MWorks ###
+
+For serious help, check out http://mworks-project.org. 
+
+To get a very simple example, open the client (MWClient) and the server (MWServer). Client-side, click the red X button and hit connect (no need to mess with the defaults unless you know what you're doing). Click the folder and choose a new experiment. Navigate to examples->Examples->DriftingGratingDemo relative to wherever you have the mworks source code saved. The "DriftingGratingDemo.xml" file should work.
+
 ### How to write a plug-in ###
 
 An MWorks plug-in will let you add functionality without altering the core source code (which requires the permission of those who run MWorks).
