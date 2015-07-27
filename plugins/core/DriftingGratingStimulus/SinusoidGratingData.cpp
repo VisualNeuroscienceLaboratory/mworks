@@ -11,13 +11,14 @@
 
 
 SinusoidGratingData::SinusoidGratingData(const shared_ptr <Variable> &_data_sample_rate) : GratingData(_data_sample_rate) {
-    for(unsigned int i=0; i<current_data_size; ++i) {
-        // use cos so it matches other gratings
-        data[i] = 0.5*(1+cos(2*M_PI*i/current_data_size));
-    }
+	for(unsigned int i=0; i<current_data_size; ++i) {
+		// use cos so it matches other gratings
+		data[i] = 0.5*(1+cos(2*M_PI*i/current_data_size));
+	}	
 }
 
 const std::string SinusoidGratingData::getName() const {
-    return "sinusoid";
+	return "sinusoid";
 }
+
 

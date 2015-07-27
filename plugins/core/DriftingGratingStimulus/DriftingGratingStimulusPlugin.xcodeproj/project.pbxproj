@@ -38,7 +38,7 @@
 		0E3891CC0ECD26E500F044B8 /* TriangleGratingData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E3891CB0ECD26E500F044B8 /* TriangleGratingData.cpp */; };
 		0EC0F2400EC52BC0004AD5CE /* RectangleMask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0EC0F23F0EC52BC0004AD5CE /* RectangleMask.cpp */; };
 		0EC0F24A0EC52D17004AD5CE /* EllipseMask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0EC0F2490EC52D17004AD5CE /* EllipseMask.cpp */; };
-		0EC0F2D30EC53519004AD5CE /* SinusoidOverlayData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0EC0F2D20EC53519004AD5CE /* SinusoidOverlayData.cpp */; };
+		0EC0F2D30EC53519004AD5CE /* SinusoidGratingData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0EC0F2D20EC53519004AD5CE /* SinusoidGratingData.cpp */; };
 		0EC0F33C0EC5395C004AD5CE /* SquareGratingData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0EC0F33B0EC5395C004AD5CE /* SquareGratingData.cpp */; };
 		0EDCBABF0EE9D39B00432792 /* MWLibrary.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0EDCBABE0EE9D39B00432792 /* MWLibrary.xml */; };
 		0EE467290ECC934400C4CDE7 /* GratingData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0EE467280ECC934400C4CDE7 /* GratingData.cpp */; };
@@ -48,16 +48,8 @@
 		0EF49B6F0ECD2A6700A82BC8 /* SawtoothGratingData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0EF49B6E0ECD2A6700A82BC8 /* SawtoothGratingData.cpp */; };
 		5C4B0A650DC79212001BC518 /* MWorksCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C4B0A630DC79212001BC518 /* MWorksCore.framework */; };
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
-		940EE1241B504056005BACFC /* UniformGratingData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 940EE1221B504056005BACFC /* UniformGratingData.cpp */; };
-		940EE1271B504130005BACFC /* SinusoidMask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 940EE1251B504130005BACFC /* SinusoidMask.cpp */; };
-		940EE12B1B508DC2005BACFC /* OverlayData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 940EE1291B508DC2005BACFC /* OverlayData.cpp */; };
-		940EE12E1B5092F5005BACFC /* SinusoidGratingData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 940EE12C1B5092F5005BACFC /* SinusoidGratingData.cpp */; };
-		940EE1311B5572A7005BACFC /* UniformOverlayData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 940EE12F1B5572A7005BACFC /* UniformOverlayData.cpp */; };
-		9447E20F1B619165000A4BFD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9447E20E1B619165000A4BFD /* CoreGraphics.framework */; };
-		946B10891B45C632003D7DE3 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946B10881B45C632003D7DE3 /* OpenGL.framework */; };
-		946B108C1B45C8F3003D7DE3 /* FlattopMask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 946B108B1B45C8F3003D7DE3 /* FlattopMask.cpp */; };
-		94D56ABF1B55BD7B00786DBF /* PulseOverlayData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94D56ABD1B55BD7B00786DBF /* PulseOverlayData.cpp */; };
 		E12D98A116BC1FBA004FEF79 /* DriftingGratingStimulusPlugin.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D5B49B6048680CD000E48DA /* DriftingGratingStimulusPlugin.bundle */; };
+		E12D98A516BC205E004FEF79 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E12D98A416BC205E004FEF79 /* OpenGL.framework */; };
 		E1DB979E16C1A904001481E9 /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DB979D16C1A904001481E9 /* libboost_system.a */; };
 /* End PBXBuildFile section */
 
@@ -104,8 +96,8 @@
 		0EC0F2480EC52D17004AD5CE /* EllipseMask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EllipseMask.h; sourceTree = "<group>"; };
 		0EC0F2490EC52D17004AD5CE /* EllipseMask.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EllipseMask.cpp; sourceTree = "<group>"; };
 		0EC0F2CA0EC533E8004AD5CE /* GratingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GratingData.h; sourceTree = "<group>"; };
-		0EC0F2D10EC53519004AD5CE /* SinusoidOverlayData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinusoidOverlayData.h; sourceTree = "<group>"; };
-		0EC0F2D20EC53519004AD5CE /* SinusoidOverlayData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SinusoidOverlayData.cpp; sourceTree = "<group>"; };
+		0EC0F2D10EC53519004AD5CE /* SinusoidGratingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinusoidGratingData.h; sourceTree = "<group>"; };
+		0EC0F2D20EC53519004AD5CE /* SinusoidGratingData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SinusoidGratingData.cpp; sourceTree = "<group>"; };
 		0EC0F33A0EC5395C004AD5CE /* SquareGratingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareGratingData.h; sourceTree = "<group>"; };
 		0EC0F33B0EC5395C004AD5CE /* SquareGratingData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SquareGratingData.cpp; sourceTree = "<group>"; };
 		0EDCBABE0EE9D39B00432792 /* MWLibrary.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = MWLibrary.xml; sourceTree = "<group>"; };
@@ -123,22 +115,7 @@
 		5CC9877C1159366900B65B91 /* WARNING.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = WARNING.txt; path = "/Library/Application Support/MWorks/Developer/Xcode/WARNING.txt"; sourceTree = "<absolute>"; };
 		8D5B49B6048680CD000E48DA /* DriftingGratingStimulusPlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriftingGratingStimulusPlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		940EE1221B504056005BACFC /* UniformGratingData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UniformGratingData.cpp; sourceTree = "<group>"; };
-		940EE1231B504056005BACFC /* UniformGratingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniformGratingData.h; sourceTree = "<group>"; };
-		940EE1251B504130005BACFC /* SinusoidMask.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SinusoidMask.cpp; sourceTree = "<group>"; };
-		940EE1261B504130005BACFC /* SinusoidMask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinusoidMask.h; sourceTree = "<group>"; };
-		940EE1291B508DC2005BACFC /* OverlayData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OverlayData.cpp; sourceTree = "<group>"; };
-		940EE12A1B508DC2005BACFC /* OverlayData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayData.h; sourceTree = "<group>"; };
-		940EE12C1B5092F5005BACFC /* SinusoidGratingData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SinusoidGratingData.cpp; sourceTree = "<group>"; };
-		940EE12D1B5092F5005BACFC /* SinusoidGratingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinusoidGratingData.h; sourceTree = "<group>"; };
-		940EE12F1B5572A7005BACFC /* UniformOverlayData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UniformOverlayData.cpp; sourceTree = "<group>"; };
-		940EE1301B5572A7005BACFC /* UniformOverlayData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniformOverlayData.h; sourceTree = "<group>"; };
-		9447E20E1B619165000A4BFD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = ../../../../../System/Library/Frameworks/CoreGraphics.framework; sourceTree = "<group>"; };
-		946B10881B45C632003D7DE3 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = ../../../../../System/Library/Frameworks/OpenGL.framework; sourceTree = "<group>"; };
-		946B108A1B45C887003D7DE3 /* FlattopMask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlattopMask.h; sourceTree = "<group>"; };
-		946B108B1B45C8F3003D7DE3 /* FlattopMask.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FlattopMask.cpp; sourceTree = "<group>"; };
-		94D56ABD1B55BD7B00786DBF /* PulseOverlayData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PulseOverlayData.cpp; sourceTree = "<group>"; };
-		94D56ABE1B55BD7B00786DBF /* PulseOverlayData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulseOverlayData.h; sourceTree = "<group>"; };
+		E12D98A416BC205E004FEF79 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		E1DB979D16C1A904001481E9 /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = "/Library/Application Support/MWorks/Developer/lib/libboost_system.a"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -147,9 +124,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9447E20F1B619165000A4BFD /* CoreGraphics.framework in Frameworks */,
 				5C4B0A650DC79212001BC518 /* MWorksCore.framework in Frameworks */,
-				946B10891B45C632003D7DE3 /* OpenGL.framework in Frameworks */,
+				E12D98A516BC205E004FEF79 /* OpenGL.framework in Frameworks */,
 				E1DB979E16C1A904001481E9 /* libboost_system.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,9 +149,8 @@
 		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				9447E20E1B619165000A4BFD /* CoreGraphics.framework */,
 				5C4B0A630DC79212001BC518 /* MWorksCore.framework */,
-				946B10881B45C632003D7DE3 /* OpenGL.framework */,
+				E12D98A416BC205E004FEF79 /* OpenGL.framework */,
 				E1DB979D16C1A904001481E9 /* libboost_system.a */,
 			);
 			name = "Frameworks and Libraries";
@@ -194,13 +169,12 @@
 		08FB77AFFE84173DC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				0EE4686B0ECCB6DC00C4CDE7 /* DriftingGratingUtilities.h */,
-				0EE4686C0ECCB6DC00C4CDE7 /* DriftingGratingUtilities.cpp */,
 				0EB9927E0EC4C26200A282C7 /* DriftingGratingStimulus */,
 				0EC0F2550EC52DE5004AD5CE /* Plugin */,
 				0EC0F2350EC52B22004AD5CE /* Masks */,
 				0EC0F2C90EC533CA004AD5CE /* Textures */,
-				940EE1281B508D95005BACFC /* Overlays */,
+				0EE4686B0ECCB6DC00C4CDE7 /* DriftingGratingUtilities.h */,
+				0EE4686C0ECCB6DC00C4CDE7 /* DriftingGratingUtilities.cpp */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -219,16 +193,12 @@
 			children = (
 				0EC0F2360EC52B36004AD5CE /* Mask.h */,
 				0EE467A30ECC995F00C4CDE7 /* Mask.cpp */,
-				0EC0F2480EC52D17004AD5CE /* EllipseMask.h */,
-				0EC0F2490EC52D17004AD5CE /* EllipseMask.cpp */,
-				946B108A1B45C887003D7DE3 /* FlattopMask.h */,
-				946B108B1B45C8F3003D7DE3 /* FlattopMask.cpp */,
-				0EE4691B0ECCBB4D00C4CDE7 /* GaussianMask.h */,
-				0EE4691C0ECCBB4D00C4CDE7 /* GaussianMask.cpp */,
 				0EC0F23E0EC52BC0004AD5CE /* RectangleMask.h */,
 				0EC0F23F0EC52BC0004AD5CE /* RectangleMask.cpp */,
-				940EE1261B504130005BACFC /* SinusoidMask.h */,
-				940EE1251B504130005BACFC /* SinusoidMask.cpp */,
+				0EC0F2480EC52D17004AD5CE /* EllipseMask.h */,
+				0EC0F2490EC52D17004AD5CE /* EllipseMask.cpp */,
+				0EE4691B0ECCBB4D00C4CDE7 /* GaussianMask.h */,
+				0EE4691C0ECCBB4D00C4CDE7 /* GaussianMask.cpp */,
 			);
 			name = Masks;
 			sourceTree = "<group>";
@@ -246,16 +216,14 @@
 			children = (
 				0EC0F2CA0EC533E8004AD5CE /* GratingData.h */,
 				0EE467280ECC934400C4CDE7 /* GratingData.cpp */,
-				0EF49B6D0ECD2A6700A82BC8 /* SawtoothGratingData.h */,
-				0EF49B6E0ECD2A6700A82BC8 /* SawtoothGratingData.cpp */,
-				940EE12D1B5092F5005BACFC /* SinusoidGratingData.h */,
-				940EE12C1B5092F5005BACFC /* SinusoidGratingData.cpp */,
+				0EC0F2D10EC53519004AD5CE /* SinusoidGratingData.h */,
+				0EC0F2D20EC53519004AD5CE /* SinusoidGratingData.cpp */,
 				0EC0F33A0EC5395C004AD5CE /* SquareGratingData.h */,
 				0EC0F33B0EC5395C004AD5CE /* SquareGratingData.cpp */,
 				0E3891CA0ECD26E500F044B8 /* TriangleGratingData.h */,
 				0E3891CB0ECD26E500F044B8 /* TriangleGratingData.cpp */,
-				940EE1231B504056005BACFC /* UniformGratingData.h */,
-				940EE1221B504056005BACFC /* UniformGratingData.cpp */,
+				0EF49B6D0ECD2A6700A82BC8 /* SawtoothGratingData.h */,
+				0EF49B6E0ECD2A6700A82BC8 /* SawtoothGratingData.cpp */,
 			);
 			name = Textures;
 			sourceTree = "<group>";
@@ -266,8 +234,7 @@
 				8D5B49B6048680CD000E48DA /* DriftingGratingStimulusPlugin.bundle */,
 			);
 			name = Products;
-			path = "/Library/Application Support/MWorks/Plugins/Core";
-			sourceTree = "<absolute>";
+			sourceTree = "<group>";
 		};
 		32C88E010371C26100C91783 /* Other Sources */ = {
 			isa = PBXGroup;
@@ -284,21 +251,6 @@
 				5CC9877C1159366900B65B91 /* WARNING.txt */,
 			);
 			name = "External Config";
-			sourceTree = "<group>";
-		};
-		940EE1281B508D95005BACFC /* Overlays */ = {
-			isa = PBXGroup;
-			children = (
-				940EE12A1B508DC2005BACFC /* OverlayData.h */,
-				940EE1291B508DC2005BACFC /* OverlayData.cpp */,
-				94D56ABE1B55BD7B00786DBF /* PulseOverlayData.h */,
-				94D56ABD1B55BD7B00786DBF /* PulseOverlayData.cpp */,
-				0EC0F2D10EC53519004AD5CE /* SinusoidOverlayData.h */,
-				0EC0F2D20EC53519004AD5CE /* SinusoidOverlayData.cpp */,
-				940EE1301B5572A7005BACFC /* UniformOverlayData.h */,
-				940EE12F1B5572A7005BACFC /* UniformOverlayData.cpp */,
-			);
-			name = Overlays;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,7 +280,7 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0410;
 			};
 			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "DriftingGratingStimulusPlugin" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -369,24 +321,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E37FBA30E59C3DD008B885D /* DriftingGratingStimulusPlugin.cpp in Sources */,
-				940EE1311B5572A7005BACFC /* UniformOverlayData.cpp in Sources */,
 				0E287D330E64A5CD005BE396 /* DriftingGratingStimulus.cpp in Sources */,
-				940EE12E1B5092F5005BACFC /* SinusoidGratingData.cpp in Sources */,
 				0EC0F2400EC52BC0004AD5CE /* RectangleMask.cpp in Sources */,
 				0EC0F24A0EC52D17004AD5CE /* EllipseMask.cpp in Sources */,
-				0EC0F2D30EC53519004AD5CE /* SinusoidOverlayData.cpp in Sources */,
+				0EC0F2D30EC53519004AD5CE /* SinusoidGratingData.cpp in Sources */,
 				0EC0F33C0EC5395C004AD5CE /* SquareGratingData.cpp in Sources */,
 				0EE467290ECC934400C4CDE7 /* GratingData.cpp in Sources */,
 				0EE467A40ECC995F00C4CDE7 /* Mask.cpp in Sources */,
-				94D56ABF1B55BD7B00786DBF /* PulseOverlayData.cpp in Sources */,
 				0EE4686D0ECCB6DC00C4CDE7 /* DriftingGratingUtilities.cpp in Sources */,
 				0EE4691D0ECCBB4D00C4CDE7 /* GaussianMask.cpp in Sources */,
 				0E3891CC0ECD26E500F044B8 /* TriangleGratingData.cpp in Sources */,
-				940EE1271B504130005BACFC /* SinusoidMask.cpp in Sources */,
-				940EE12B1B508DC2005BACFC /* OverlayData.cpp in Sources */,
-				940EE1241B504056005BACFC /* UniformGratingData.cpp in Sources */,
 				0EF49B6F0ECD2A6700A82BC8 /* SawtoothGratingData.cpp in Sources */,
-				946B108C1B45C8F3003D7DE3 /* FlattopMask.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,12 +365,10 @@
 		1DEB913B08733D840010E9CD /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = DriftingGratingStimulusPlugin_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = DriftingGratingStimulusPlugin;
-				SDKROOT = macosx;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Development;
@@ -434,20 +377,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5CC9877B1159366900B65B91 /* Development.xcconfig */;
 			buildSettings = {
-				CLANG_WARN_BOOL_CONVERSION = NO;
-				CLANG_WARN_CONSTANT_CONVERSION = NO;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = NO;
-				CLANG_WARN_INT_CONVERSION = NO;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
 			};
 			name = Development;
 		};
