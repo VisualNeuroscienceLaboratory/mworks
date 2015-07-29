@@ -1,0 +1,5 @@
+VNL ideas:
+
+Borrow from an existing plug-in (one that includes a GUI) and borrow from this & Romesh’s code to create a plug-in that lets us change the monitor’s gamma. Make this clean, and talk to MWorks people. Ask them: Should we (you) incorporate this functionality in core (server-side) or move the existing display preferences to this plug-in.
+
+	Notes: The server GUI is MWorks/mworks/apps/server/MainMenu.xib
