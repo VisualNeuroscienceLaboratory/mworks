@@ -1,9 +1,9 @@
 /*
- *  ___PROJECTNAMEASIDENTIFIER___Factory.h
- *  ___PROJECTNAME___
+ *  GammaStimulusFactory.h
+ *  GammaStimulus
  *
- *  Created by ___FULLUSERNAME___ on ___DATE___.
- *  Copyright ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
+ *  Created by Romesh Kumbhani on 07/21/2015.
+ *  Copyright 2015 NYU. All rights reserved.
  *
  */
 

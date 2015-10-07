@@ -54,7 +54,7 @@
 		68E8A40D0C9EC969003ECAB7 /* MWSNetworkToolbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E8A40C0C9EC969003ECAB7 /* MWSNetworkToolbarItem.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
-		E12D996116BC3B39004FEF79 /* MWServer.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D1107320486CEB800E47090 /* MWServer.app */; };
+		E12D996116BC3B39004FEF79 /* MWServerVNL.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D1107320486CEB800E47090 /* MWServerVNL.app */; };
 		E14742AA193F9BFF00A82D91 /* MWSSetupVariablesController.m in Sources */ = {isa = PBXBuildFile; fileRef = E14742A9193F9BFF00A82D91 /* MWSSetupVariablesController.m */; };
 		E1518A9B1940C25D00ADB7D0 /* libboost_filesystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1518A9A1940C25D00ADB7D0 /* libboost_filesystem.a */; };
 		E15D0AEE16C2ACAA00F331B1 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15D0AED16C2ACAA00F331B1 /* AppKit.framework */; };
@@ -93,7 +93,7 @@
 			dstPath = "$(LOCAL_APPS_DIR)";
 			dstSubfolderSpec = 0;
 			files = (
-				E12D996116BC3B39004FEF79 /* MWServer.app in CopyFiles */,
+				E12D996116BC3B39004FEF79 /* MWServerVNL.app in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +121,7 @@
 		68E8A40B0C9EC969003ECAB7 /* MWSNetworkToolbarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWSNetworkToolbarItem.h; sourceTree = "<group>"; };
 		68E8A40C0C9EC969003ECAB7 /* MWSNetworkToolbarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWSNetworkToolbarItem.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* MWServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MWServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1107320486CEB800E47090 /* MWServerVNL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MWServerVNL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14742A8193F9BFF00A82D91 /* MWSSetupVariablesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWSSetupVariablesController.h; sourceTree = "<group>"; };
 		E14742A9193F9BFF00A82D91 /* MWSSetupVariablesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWSSetupVariablesController.m; sourceTree = "<group>"; };
 		E1518A9A1940C25D00ADB7D0 /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_filesystem.a; path = "/Library/Application Support/MWorks/Developer/lib/libboost_filesystem.a"; sourceTree = "<absolute>"; };
@@ -201,7 +201,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107320486CEB800E47090 /* MWServer.app */,
+				8D1107320486CEB800E47090 /* MWServerVNL.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -288,7 +288,7 @@
 			name = MWorksServer;
 			productInstallPath = "$(HOME)/Applications";
 			productName = MWorksServer;
-			productReference = 8D1107320486CEB800E47090 /* MWServer.app */;
+			productReference = 8D1107320486CEB800E47090 /* MWServerVNL.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -428,7 +428,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Info.plist;
-				PRODUCT_NAME = MWServer;
+				PRODUCT_NAME = MWServerVNL;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Development;
@@ -437,6 +437,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5CE62A30115854CF00C757F1 /* Development.xcconfig */;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx10.9;
 			};
 			name = Development;
 		};

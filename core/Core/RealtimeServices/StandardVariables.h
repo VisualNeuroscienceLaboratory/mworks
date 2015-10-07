@@ -167,6 +167,10 @@ extern shared_ptr<Variable> loadedExperiment;
 #define M_MIRROR_WINDOW_BASE_HEIGHT_KEY		"mirror_window_base_height"
 #define M_REFRESH_RATE_KEY					"refresh_rate_hz"
 #define M_ANNOUNCE_INDIVIDUAL_STIMULI_KEY	"announce_individual_stimuli"
+#define M_GAMMA_R_KEY                       "gammaR"
+#define M_GAMMA_G_KEY                       "gammaG"
+#define M_GAMMA_B_KEY                       "gammaB"
+
 extern shared_ptr<Variable> mainDisplayInfo;		
 
 #define WARN_ON_SKIPPED_REFRESH_TAGNAME "#warnOnSkippedRefresh"

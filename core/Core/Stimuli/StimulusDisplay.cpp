@@ -43,8 +43,10 @@ StimulusDisplay::StimulusDisplay(bool announceIndividualStimuli) :
     // defer creation of the display chain until after the stimulus display has been created
     display_stack = shared_ptr< LinkedList<StimulusNode> >(new LinkedList<StimulusNode>());
     
-	setDisplayBounds();
+	setDisplayBounds();  // sets up the coordinate system
     setBackgroundColor(0.5, 0.5, 0.5);
+    setGammaForStimulus();
+    reportCurrentGamma();
 
     opengl_context_manager = OpenGLContextManager::instance();
     clock = Clock::instance();
@@ -57,6 +59,7 @@ StimulusDisplay::StimulusDisplay(bool announceIndividualStimuli) :
 }
 
 StimulusDisplay::~StimulusDisplay(){
+    unsetGammaForStimulus();
     stateSystemNotification->remove();
     
     for (auto dl : displayLinks) {
@@ -117,14 +120,14 @@ void StimulusDisplay::getDisplayBounds(const Datum &display_info,
 		GLdouble half_height_deg = half_width_deg * height_unknown_units / width_unknown_units;
 		//GLdouble half_height_deg = (180. / M_PI) * atan((height_unknown_units/2.)/distance_unknown_units);
 		
-		left = -half_width_deg;
-		right = half_width_deg;
-		top = half_height_deg;
+		left   = -half_width_deg;
+		right  = half_width_deg;
+		top    = half_height_deg;
 		bottom = -half_height_deg;
 	} else {
-		left = M_STIMULUS_DISPLAY_LEFT_EDGE;
-		right = M_STIMULUS_DISPLAY_RIGHT_EDGE;
-		top = M_STIMULUS_DISPLAY_TOP_EDGE;
+		left   = M_STIMULUS_DISPLAY_LEFT_EDGE;
+		right  = M_STIMULUS_DISPLAY_RIGHT_EDGE;
+		top    = M_STIMULUS_DISPLAY_TOP_EDGE;
 		bottom = M_STIMULUS_DISPLAY_BOTTOM_EDGE;
 	}
 }
@@ -139,6 +142,142 @@ void StimulusDisplay::setDisplayBounds(){
 	mprintf("Display bounds set to (%g left, %g right, %g top, %g bottom)",
 			left, right, top, bottom);
 }
+
+void StimulusDisplay::reportCurrentGamma(){
+    shared_ptr<mw::ComponentRegistry> reg = mw::ComponentRegistry::getSharedRegistry();
+    shared_ptr<Variable> main_screen_info = reg->getVariable(MAIN_SCREEN_INFO_TAGNAME);
+    
+    Datum display_info = *main_screen_info; // from standard variables
+    if(display_info.getDataType() == M_DICTIONARY &&
+       display_info.hasKey(M_DISPLAY_TO_USE_KEY) ){
+        int    screen_number = display_info.getElement(M_DISPLAY_TO_USE_KEY);
+        
+        
+        NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+        NSArray *screens = [NSScreen screens];
+        CGDirectDisplayID stimMonID = [[[[screens objectAtIndex: screen_number] deviceDescription] objectForKey:@"NSScreenNumber"] intValue];
+        [pool drain];
+        
+        
+        CGGammaValue tmp_minR, tmp_maxR, tmp_gammaR;
+        CGGammaValue tmp_minG, tmp_maxG, tmp_gammaG;
+        CGGammaValue tmp_minB, tmp_maxB, tmp_gammaB;
+        CGError result;
+        
+        result = CGGetDisplayTransferByFormula(stimMonID,
+                                      &tmp_minR, &tmp_maxR, &tmp_gammaR,
+                                      &tmp_minG, &tmp_maxG, &tmp_gammaG,
+                                      &tmp_minB, &tmp_maxB, &tmp_gammaB);
+        
+        mprintf("Current Gamma Settings: R:%.4f,G:%.4f,B:%.4f | %d",tmp_gammaR,tmp_gammaG,tmp_gammaB, result);
+        mprintf("Current Gamma Settings: Rmin:%.4f,Gmin:%.4f,Bmin:%.4f | %d",tmp_minR,tmp_minG,tmp_minB, result);
+        mprintf("Current Gamma Settings: Rmax:%.4f,Gmax:%.4f,Bmax:%.4f | %d",tmp_maxR,tmp_maxG,tmp_maxB, result);
+        
+        
+        uint32_t capacity  = CGDisplayGammaTableCapacity(stimMonID);
+        CGGammaValue redTable[capacity];
+        CGGammaValue greenTable[capacity];
+        CGGammaValue blueTable[capacity];
+        uint32_t sampleCount = 0;
+        
+        result = CGGetDisplayTransferByTable (stimMonID, capacity, redTable, greenTable, blueTable, &sampleCount);
+        
+        
+        mprintf("Current Gamma Settings (table): R:%.4f,G:%.4f,B:%.4f",
+                (CGGammaValue)(log(redTable[2] / redTable[1]) / M_LN2),
+                (CGGammaValue)(log(greenTable[2] / greenTable[1]) / M_LN2),
+                (CGGammaValue)(log(blueTable[2] / blueTable[1]) / M_LN2));
+                
+        
+        
+    }
+    
+}
+
+void StimulusDisplay::setGammaForStimulus(){
+    shared_ptr<mw::ComponentRegistry> reg = mw::ComponentRegistry::getSharedRegistry();
+    shared_ptr<Variable> main_screen_info = reg->getVariable(MAIN_SCREEN_INFO_TAGNAME);
+    
+    Datum display_info = *main_screen_info; // from standard variables
+    if(display_info.getDataType() == M_DICTIONARY &&
+       display_info.hasKey(M_GAMMA_R_KEY) &&
+       display_info.hasKey(M_GAMMA_G_KEY) &&
+       display_info.hasKey(M_GAMMA_B_KEY) &&
+       display_info.hasKey(M_DISPLAY_TO_USE_KEY) ){
+        // Gamma Key found
+
+        CGGammaValue new_gammaR = (float)display_info.getElement(M_GAMMA_R_KEY);
+        CGGammaValue new_gammaG = (float)display_info.getElement(M_GAMMA_G_KEY);
+        CGGammaValue new_gammaB = (float)display_info.getElement(M_GAMMA_B_KEY);
+        int    screen_number = display_info.getElement(M_DISPLAY_TO_USE_KEY);
+
+        
+        NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+        NSArray *screens = [NSScreen screens];
+        CGDirectDisplayID stimMonID = [[[[screens objectAtIndex: screen_number] deviceDescription] objectForKey:@"NSScreenNumber"] intValue];
+        [pool drain];
+        
+        CGGetDisplayTransferByFormula(stimMonID,
+                                      &old_minR, &old_maxR, &old_gammaR,
+                                      &old_minG, &old_maxG, &old_gammaG,
+                                      &old_minB, &old_maxB, &old_gammaB);
+        
+        mprintf("OLD: R:%.4f,G:%.4f,B:%.4f",old_gammaR,old_gammaG,old_gammaB);
+        mprintf("TOBESET: R:%.4f,G:%.4f,B:%.4f",1.0f/new_gammaR,1.0f/new_gammaG,1.0f/new_gammaB);
+        
+        CGSetDisplayTransferByFormula(stimMonID,
+                                      0.0f, 1.0f, 1.0f/new_gammaR,
+                                      0.0f, 1.0f, 1.0f/new_gammaG,
+                                      0.0f, 1.0f, 1.0f/new_gammaB);
+
+        CGGammaValue tmp_minR, tmp_maxR, tmp_gammaR;
+        CGGammaValue tmp_minG, tmp_maxG, tmp_gammaG;
+        CGGammaValue tmp_minB, tmp_maxB, tmp_gammaB;
+        
+        CGGetDisplayTransferByFormula(stimMonID,
+                                      &tmp_minR, &tmp_maxR, &tmp_gammaR,
+                                      &tmp_minG, &tmp_maxG, &tmp_gammaG,
+                                      &tmp_minB, &tmp_maxB, &tmp_gammaB);
+        
+        mprintf("NOW: R:%.4f,G:%.4f,B:%.4f",tmp_gammaR,tmp_gammaG,tmp_gammaB);
+        
+    } else {
+        // no Gamma Key found
+        mprintf("No Gamma Values found. Nothing to set.");
+    }
+    
+}
+
+void StimulusDisplay::unsetGammaForStimulus(){
+    shared_ptr<mw::ComponentRegistry> reg = mw::ComponentRegistry::getSharedRegistry();
+    shared_ptr<Variable> main_screen_info = reg->getVariable(MAIN_SCREEN_INFO_TAGNAME);
+    
+    Datum display_info = *main_screen_info; // from standard variables
+    if(display_info.getDataType() == M_DICTIONARY &&
+       display_info.hasKey(M_GAMMA_R_KEY) &&
+       display_info.hasKey(M_GAMMA_G_KEY) &&
+       display_info.hasKey(M_GAMMA_B_KEY) &&
+       display_info.hasKey(M_DISPLAY_TO_USE_KEY) ){
+
+        int screen_number = display_info.getElement(M_DISPLAY_TO_USE_KEY);
+        
+        NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+        NSArray *screens = [NSScreen screens];
+        CGDirectDisplayID stimMonID = [[[[screens objectAtIndex: screen_number] deviceDescription] objectForKey:@"NSScreenNumber"] intValue];
+        [pool drain];
+        
+        CGSetDisplayTransferByFormula(stimMonID,
+                                      old_minR, old_maxR, old_gammaR,
+                                      old_minG, old_maxG, old_gammaG,
+                                      old_minB, old_maxB, old_gammaB);
+        
+        mprintf("Reset Gamma Values to the old ones.");
+    } else {
+        // no Gamma Key found
+        mprintf("No Gamma Values found. Nothing to reset.");
+    }
+}
+
 
 void StimulusDisplay::getDisplayBounds(GLdouble &left, GLdouble &right, GLdouble &bottom, GLdouble &top) {
     left = this->left;

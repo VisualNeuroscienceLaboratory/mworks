@@ -41,3 +41,7 @@ GLint OverlayData::getSize() const {
 const GLfloat * OverlayData::get2DData() const {
     return data;
 }
+
+const std::string OverlayData::getName() const {
+    return "none";
+}

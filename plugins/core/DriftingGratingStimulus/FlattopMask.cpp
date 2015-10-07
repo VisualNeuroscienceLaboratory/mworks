@@ -24,8 +24,8 @@ FlattopMask::FlattopMask(const shared_ptr<Variable> &_size, uint8_t n) : Mask(_s
     
     // leave the one pixel margin around the edge
     for(unsigned int channel=0; channel<M_MASK_CHANNELS; ++channel) {
-        for(unsigned int row=1; row<current_size-1; ++row) {
-            for(unsigned int column=1; column<current_size-1; ++column) {
+        for(unsigned int row=0; row<current_size; ++row) {
+            for(unsigned int column=0; column<current_size; ++column) {
                 r = row-radius;
                 c = column-radius;
                 const float d = sqrt((r*r) + (c*c))/radius;

@@ -20,17 +20,20 @@ using mw::Datum;
 
 @implementation MWSSetupVariablesController
 
-@synthesize serverName = _serverName;
-@synthesize displayToUse = _displayToUse;
-@synthesize displayWidth = _displayWidth;
-@synthesize displayHeight = _displayHeight;
-@synthesize displayDistance = _displayDistance;
+@synthesize serverName                = _serverName;
+@synthesize displayToUse              = _displayToUse;
+@synthesize displayWidth              = _displayWidth;
+@synthesize displayHeight             = _displayHeight;
+@synthesize displayDistance           = _displayDistance;
 @synthesize alwaysDisplayMirrorWindow = _alwaysDisplayMirrorWindow;
-@synthesize mirrorWindowBaseHeight = _mirrorWindowBaseHeight;
+@synthesize mirrorWindowBaseHeight    = _mirrorWindowBaseHeight;
 @synthesize announceIndividualStimuli = _announceIndividualStimuli;
-@synthesize warnOnSkippedRefresh = _warnOnSkippedRefresh;
-@synthesize allowAltFailover = _allowAltFailover;
-@synthesize useHighPrecisionClock = _useHighPrecisionClock;
+@synthesize warnOnSkippedRefresh      = _warnOnSkippedRefresh;
+@synthesize allowAltFailover          = _allowAltFailover;
+@synthesize useHighPrecisionClock     = _useHighPrecisionClock;
+@synthesize gammaR                    = _gammaR;
+@synthesize gammaG                    = _gammaG;
+@synthesize gammaB                    = _gammaB;
 
 
 - (instancetype)init {
@@ -50,6 +53,9 @@ using mw::Datum;
                 _alwaysDisplayMirrorWindow = mdi.getElement(M_ALWAYS_DISPLAY_MIRROR_WINDOW_KEY).getBool();
                 _mirrorWindowBaseHeight = [[NSNumber alloc] initWithDouble:(mdi.getElement(M_MIRROR_WINDOW_BASE_HEIGHT_KEY).getFloat())];
                 _announceIndividualStimuli = mdi.getElement(M_ANNOUNCE_INDIVIDUAL_STIMULI_KEY).getBool();
+                _gammaR = [[NSNumber alloc] initWithDouble:(mdi.getElement(M_GAMMA_R_KEY).getFloat())];
+                _gammaG = [[NSNumber alloc] initWithDouble:(mdi.getElement(M_GAMMA_G_KEY).getFloat())];
+                _gammaB = [[NSNumber alloc] initWithDouble:(mdi.getElement(M_GAMMA_B_KEY).getFloat())];
             }
         }
         
@@ -77,6 +83,9 @@ using mw::Datum;
     [_displayHeight release];
     [_displayWidth release];
     [_displayToUse release];
+    [_gammaR release];
+    [_gammaG release];
+    [_gammaB release];
     [_serverName release];
     
     dispatch_release(writeQueue);
@@ -167,6 +176,38 @@ using mw::Datum;
     [self updateVariable:mw::mainDisplayInfo
                      key:M_MIRROR_WINDOW_BASE_HEIGHT_KEY
                    value:[mirrorWindowBaseHeight doubleValue]];
+}
+
+
+
+- (void)setGammaR:(NSNumber *)gammaR {
+    if (_gammaR != gammaR) {
+        [_gammaR release];
+        _gammaR = [gammaR retain];
+    }
+    [self updateVariable:mw::mainDisplayInfo
+                     key:M_GAMMA_R_KEY
+                   value:[gammaR doubleValue]];
+}
+
+- (void)setGammaG:(NSNumber *)gammaG {
+    if (_gammaG != gammaG) {
+        [_gammaG release];
+        _gammaG = [gammaG retain];
+    }
+    [self updateVariable:mw::mainDisplayInfo
+                     key:M_GAMMA_G_KEY
+                   value:[gammaG doubleValue]];
+}
+
+- (void)setGammaB:(NSNumber *)gammaB {
+    if (_gammaB != gammaB) {
+        [_gammaB release];
+        _gammaB = [gammaB retain];
+    }
+    [self updateVariable:mw::mainDisplayInfo
+                     key:M_GAMMA_B_KEY
+                   value:[gammaB doubleValue]];
 }
 
 

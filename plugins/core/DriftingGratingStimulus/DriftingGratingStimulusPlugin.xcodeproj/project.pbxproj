@@ -52,8 +52,10 @@
 		940EE1271B504130005BACFC /* SinusoidMask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 940EE1251B504130005BACFC /* SinusoidMask.cpp */; };
 		940EE12B1B508DC2005BACFC /* OverlayData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 940EE1291B508DC2005BACFC /* OverlayData.cpp */; };
 		940EE12E1B5092F5005BACFC /* SinusoidGratingData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 940EE12C1B5092F5005BACFC /* SinusoidGratingData.cpp */; };
+		940EE1311B5572A7005BACFC /* UniformOverlayData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 940EE12F1B5572A7005BACFC /* UniformOverlayData.cpp */; };
 		946B10891B45C632003D7DE3 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946B10881B45C632003D7DE3 /* OpenGL.framework */; };
 		946B108C1B45C8F3003D7DE3 /* FlattopMask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 946B108B1B45C8F3003D7DE3 /* FlattopMask.cpp */; };
+		94D56ABF1B55BD7B00786DBF /* PulseOverlayData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94D56ABD1B55BD7B00786DBF /* PulseOverlayData.cpp */; };
 		E12D98A116BC1FBA004FEF79 /* DriftingGratingStimulusPlugin.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D5B49B6048680CD000E48DA /* DriftingGratingStimulusPlugin.bundle */; };
 		E1DB979E16C1A904001481E9 /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DB979D16C1A904001481E9 /* libboost_system.a */; };
 /* End PBXBuildFile section */
@@ -128,9 +130,13 @@
 		940EE12A1B508DC2005BACFC /* OverlayData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayData.h; sourceTree = "<group>"; };
 		940EE12C1B5092F5005BACFC /* SinusoidGratingData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SinusoidGratingData.cpp; sourceTree = "<group>"; };
 		940EE12D1B5092F5005BACFC /* SinusoidGratingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinusoidGratingData.h; sourceTree = "<group>"; };
+		940EE12F1B5572A7005BACFC /* UniformOverlayData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UniformOverlayData.cpp; sourceTree = "<group>"; };
+		940EE1301B5572A7005BACFC /* UniformOverlayData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniformOverlayData.h; sourceTree = "<group>"; };
 		946B10881B45C632003D7DE3 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = ../../../../../System/Library/Frameworks/OpenGL.framework; sourceTree = "<group>"; };
 		946B108A1B45C887003D7DE3 /* FlattopMask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlattopMask.h; sourceTree = "<group>"; };
 		946B108B1B45C8F3003D7DE3 /* FlattopMask.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FlattopMask.cpp; sourceTree = "<group>"; };
+		94D56ABD1B55BD7B00786DBF /* PulseOverlayData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PulseOverlayData.cpp; sourceTree = "<group>"; };
+		94D56ABE1B55BD7B00786DBF /* PulseOverlayData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulseOverlayData.h; sourceTree = "<group>"; };
 		E1DB979D16C1A904001481E9 /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = "/Library/Application Support/MWorks/Developer/lib/libboost_system.a"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -184,13 +190,13 @@
 		08FB77AFFE84173DC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0EE4686B0ECCB6DC00C4CDE7 /* DriftingGratingUtilities.h */,
+				0EE4686C0ECCB6DC00C4CDE7 /* DriftingGratingUtilities.cpp */,
 				0EB9927E0EC4C26200A282C7 /* DriftingGratingStimulus */,
 				0EC0F2550EC52DE5004AD5CE /* Plugin */,
 				0EC0F2350EC52B22004AD5CE /* Masks */,
 				0EC0F2C90EC533CA004AD5CE /* Textures */,
 				940EE1281B508D95005BACFC /* Overlays */,
-				0EE4686B0ECCB6DC00C4CDE7 /* DriftingGratingUtilities.h */,
-				0EE4686C0ECCB6DC00C4CDE7 /* DriftingGratingUtilities.cpp */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -238,14 +244,14 @@
 				0EE467280ECC934400C4CDE7 /* GratingData.cpp */,
 				0EF49B6D0ECD2A6700A82BC8 /* SawtoothGratingData.h */,
 				0EF49B6E0ECD2A6700A82BC8 /* SawtoothGratingData.cpp */,
+				940EE12D1B5092F5005BACFC /* SinusoidGratingData.h */,
+				940EE12C1B5092F5005BACFC /* SinusoidGratingData.cpp */,
 				0EC0F33A0EC5395C004AD5CE /* SquareGratingData.h */,
 				0EC0F33B0EC5395C004AD5CE /* SquareGratingData.cpp */,
 				0E3891CA0ECD26E500F044B8 /* TriangleGratingData.h */,
 				0E3891CB0ECD26E500F044B8 /* TriangleGratingData.cpp */,
 				940EE1231B504056005BACFC /* UniformGratingData.h */,
 				940EE1221B504056005BACFC /* UniformGratingData.cpp */,
-				940EE12D1B5092F5005BACFC /* SinusoidGratingData.h */,
-				940EE12C1B5092F5005BACFC /* SinusoidGratingData.cpp */,
 			);
 			name = Textures;
 			sourceTree = "<group>";
@@ -281,8 +287,12 @@
 			children = (
 				940EE12A1B508DC2005BACFC /* OverlayData.h */,
 				940EE1291B508DC2005BACFC /* OverlayData.cpp */,
+				94D56ABE1B55BD7B00786DBF /* PulseOverlayData.h */,
+				94D56ABD1B55BD7B00786DBF /* PulseOverlayData.cpp */,
 				0EC0F2D10EC53519004AD5CE /* SinusoidOverlayData.h */,
 				0EC0F2D20EC53519004AD5CE /* SinusoidOverlayData.cpp */,
+				940EE1301B5572A7005BACFC /* UniformOverlayData.h */,
+				940EE12F1B5572A7005BACFC /* UniformOverlayData.cpp */,
 			);
 			name = Overlays;
 			sourceTree = "<group>";
@@ -355,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E37FBA30E59C3DD008B885D /* DriftingGratingStimulusPlugin.cpp in Sources */,
+				940EE1311B5572A7005BACFC /* UniformOverlayData.cpp in Sources */,
 				0E287D330E64A5CD005BE396 /* DriftingGratingStimulus.cpp in Sources */,
 				940EE12E1B5092F5005BACFC /* SinusoidGratingData.cpp in Sources */,
 				0EC0F2400EC52BC0004AD5CE /* RectangleMask.cpp in Sources */,
@@ -363,6 +374,7 @@
 				0EC0F33C0EC5395C004AD5CE /* SquareGratingData.cpp in Sources */,
 				0EE467290ECC934400C4CDE7 /* GratingData.cpp in Sources */,
 				0EE467A40ECC995F00C4CDE7 /* Mask.cpp in Sources */,
+				94D56ABF1B55BD7B00786DBF /* PulseOverlayData.cpp in Sources */,
 				0EE4686D0ECCB6DC00C4CDE7 /* DriftingGratingUtilities.cpp in Sources */,
 				0EE4691D0ECCBB4D00C4CDE7 /* GaussianMask.cpp in Sources */,
 				0E3891CC0ECD26E500F044B8 /* TriangleGratingData.cpp in Sources */,
@@ -409,7 +421,7 @@
 				GCC_PREFIX_HEADER = DriftingGratingStimulusPlugin_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = DriftingGratingStimulusPlugin;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.9;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Development;

@@ -1,0 +1,30 @@
+//
+//  PR650Driver-Prefix.pch
+//  PR650Driver
+//
+//  Created by VNL stimulus on 8/21/15.
+//  Copyright (c) 2015 New York University - Visual Neuroscience Lab. All rights reserved.
+//
+
+#ifndef PR650Driver_PR650Driver_Prefix_pch
+#define PR650Driver_PR650Driver_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __cplusplus
+
+#include <numeric>
+
+#include <boost/noncopyable.hpp>
+#include <boost/static_assert.hpp>
+
+#include <MWorksCore/IODevice.h>
+#include <MWorksCore/Plugin.h>
+#include <MWorksCore/StandardComponentFactory.h>
+#include <MWorksCore/TrialBuildingBlocks.h>
+
+#endif /* defined(__cplusplus) */
+
+#endif /* !defined(PR650Driver_PR650Driver_Prefix_pch) */
+

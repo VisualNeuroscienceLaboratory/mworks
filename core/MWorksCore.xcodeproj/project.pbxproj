@@ -301,6 +301,7 @@
 		8ED452CA08BF9870003880D5 /* VariableTransformAdaptors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8ED452C508BF9870003880D5 /* VariableTransformAdaptors.cpp */; };
 		8ED452CB08BF9870003880D5 /* VariableTransformAdaptors.h in Headers */ = {isa = PBXBuildFile; fileRef = 8ED452C608BF9870003880D5 /* VariableTransformAdaptors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8EE2F3A108C8227700B873A2 /* FitableFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EE2F39F08C8227700B873A2 /* FitableFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		949396031B829E500066A3D4 /* vecLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949396021B829E500066A3D4 /* vecLib.framework */; };
 		DA08704308A3D22A00D20FFB /* NetworkConnectionStats.h in Headers */ = {isa = PBXBuildFile; fileRef = DA08704108A3D22A00D20FFB /* NetworkConnectionStats.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA08704408A3D22A00D20FFB /* NetworkConnectionStats.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA08704208A3D22A00D20FFB /* NetworkConnectionStats.cpp */; };
 		DA0873F808A9367E00D20FFB /* ScarabServerConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = DA0873F608A9367E00D20FFB /* ScarabServerConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -424,7 +425,6 @@
 		E16BC17C137D952D0052D8E1 /* MachUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E16BC17A137D952D0052D8E1 /* MachUtilities.cpp */; };
 		E194BF6E1590DB5300D4A62D /* StimulusDisplayDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E194BF6D1590DB5300D4A62D /* StimulusDisplayDevice.cpp */; };
 		E194BF6F1590DB6900D4A62D /* StimulusDisplayDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = E194BF6C1590DB3900D4A62D /* StimulusDisplayDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E1A691541A83DD1800CE914C /* vecLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A691531A83DD1800CE914C /* vecLib.framework */; };
 		E1C87A1313FDA558005FF5ED /* DynamicStimulusActions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1C87A1213FDA558005FF5ED /* DynamicStimulusActions.cpp */; };
 		E1C87A1513FDA56F005FF5ED /* DynamicStimulusActions.h in Headers */ = {isa = PBXBuildFile; fileRef = E1C87A1413FDA56F005FF5ED /* DynamicStimulusActions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E1CBF63E16BAF3190057CE48 /* MWorksCore.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DA2CE0D407E9F68100C68AEF /* MWorksCore.framework */; };
@@ -926,6 +926,7 @@
 		8ED4542B08C56280003880D5 /* EyeCalibrators.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EyeCalibrators.cpp; path = Core/Transforms/EyeCalibrators.cpp; sourceTree = SOURCE_ROOT; };
 		8EE2F39F08C8227700B873A2 /* FitableFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FitableFunctions.h; path = Core/Transforms/FitableFunctions.h; sourceTree = SOURCE_ROOT; };
 		8EE2F3A008C8227700B873A2 /* FitableFunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FitableFunctions.cpp; path = Core/Transforms/FitableFunctions.cpp; sourceTree = SOURCE_ROOT; };
+		949396021B829E500066A3D4 /* vecLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = vecLib.framework; path = ../../../System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework; sourceTree = "<group>"; };
 		DA08704108A3D22A00D20FFB /* NetworkConnectionStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkConnectionStats.h; path = Core/Network/NetworkConnectionStats.h; sourceTree = SOURCE_ROOT; };
 		DA08704208A3D22A00D20FFB /* NetworkConnectionStats.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NetworkConnectionStats.cpp; path = Core/Network/NetworkConnectionStats.cpp; sourceTree = SOURCE_ROOT; };
 		DA0873F608A9367E00D20FFB /* ScarabServerConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScarabServerConnection.h; path = Core/Network/Connections/ScarabServerConnection.h; sourceTree = SOURCE_ROOT; };
@@ -1057,12 +1058,11 @@
 		E16BC17A137D952D0052D8E1 /* MachUtilities.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MachUtilities.cpp; path = Core/Utilities/MachUtilities.cpp; sourceTree = "<group>"; };
 		E194BF6C1590DB3900D4A62D /* StimulusDisplayDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StimulusDisplayDevice.h; path = Core/Stimuli/StimulusDisplayDevice.h; sourceTree = "<group>"; };
 		E194BF6D1590DB5300D4A62D /* StimulusDisplayDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StimulusDisplayDevice.cpp; path = Core/Stimuli/StimulusDisplayDevice.cpp; sourceTree = "<group>"; };
-		E1A691531A83DD1800CE914C /* vecLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = vecLib.framework; path = System/Library/Frameworks/vecLib.framework; sourceTree = SDKROOT; };
 		E1C87A1213FDA558005FF5ED /* DynamicStimulusActions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DynamicStimulusActions.cpp; sourceTree = "<group>"; };
 		E1C87A1413FDA56F005FF5ED /* DynamicStimulusActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicStimulusActions.h; sourceTree = "<group>"; };
 		E1DB974816C16BEE001481E9 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		E1DB974A16C16C1F001481E9 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
-		E1DB974C16C16C30001481E9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		E1DB974C16C16C30001481E9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /development/mworks/core/../../../System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		E1DB974E16C16C3F001481E9 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		E1DB975016C16C50001481E9 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = usr/lib/libcrypto.dylib; sourceTree = SDKROOT; };
 		E1DB975216C16C65001481E9 /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_filesystem.a; path = "/Library/Application Support/MWorks/Developer/lib/libboost_filesystem.a"; sourceTree = "<absolute>"; };
@@ -1159,10 +1159,10 @@
 				E1DB974F16C16C3F001481E9 /* IOKit.framework in Frameworks */,
 				E1DB975E16C16CA2001481E9 /* OpenAL.framework in Frameworks */,
 				E1DB975F16C16CA2001481E9 /* OpenGL.framework in Frameworks */,
-				E1A691541A83DD1800CE914C /* vecLib.framework in Frameworks */,
 				E1DB975116C16C50001481E9 /* libcrypto.dylib in Frameworks */,
 				E1DB977216C16D19001481E9 /* libxml2.dylib in Frameworks */,
 				E1DB977316C16D19001481E9 /* libxslt.dylib in Frameworks */,
+				949396031B829E500066A3D4 /* vecLib.framework in Frameworks */,
 				E1DB976F16C16D02001481E9 /* libz.dylib in Frameworks */,
 				E1DB975316C16C65001481E9 /* libboost_filesystem.a in Frameworks */,
 				E1DB975516C16C73001481E9 /* libboost_regex.a in Frameworks */,
@@ -2159,6 +2159,7 @@
 		E1DB974616C16BB7001481E9 /* System */ = {
 			isa = PBXGroup;
 			children = (
+				949396021B829E500066A3D4 /* vecLib.framework */,
 				E1DB974C16C16C30001481E9 /* AppKit.framework */,
 				E1DB974816C16BEE001481E9 /* CoreAudio.framework */,
 				E1DB977716C17068001481E9 /* CoreServices.framework */,
@@ -2166,7 +2167,6 @@
 				E1DB974E16C16C3F001481E9 /* IOKit.framework */,
 				E1DB975C16C16CA1001481E9 /* OpenAL.framework */,
 				E1DB975D16C16CA1001481E9 /* OpenGL.framework */,
-				E1A691531A83DD1800CE914C /* vecLib.framework */,
 				E1DB975016C16C50001481E9 /* libcrypto.dylib */,
 				E1DB977016C16D18001481E9 /* libxml2.dylib */,
 				E1DB977116C16D18001481E9 /* libxslt.dylib */,
@@ -3015,6 +3015,10 @@
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/Accelerate.framework/Versions/A/Frameworks",
+				);
 				FRAMEWORK_VERSION = A;
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
@@ -3064,6 +3068,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5C0CD7A41149E75F00B1C674 /* Development.xcconfig */;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx10.9;
 			};
 			name = Development;
 		};
@@ -3071,6 +3077,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "Set Version String";
+				SDKROOT = macosx;
 			};
 			name = Development;
 		};

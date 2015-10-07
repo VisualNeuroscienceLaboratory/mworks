@@ -17,26 +17,35 @@
     NSNumber *_displayWidth;
     NSNumber *_displayHeight;
     NSNumber *_displayDistance;
-    BOOL _alwaysDisplayMirrorWindow;
+    BOOL      _alwaysDisplayMirrorWindow;
     NSNumber *_mirrorWindowBaseHeight;
-    BOOL _announceIndividualStimuli;
-    BOOL _warnOnSkippedRefresh;
-    BOOL _allowAltFailover;
-    BOOL _useHighPrecisionClock;
+    BOOL      _announceIndividualStimuli;
+    BOOL      _warnOnSkippedRefresh;
+    BOOL      _allowAltFailover;
+    BOOL      _useHighPrecisionClock;
+    NSNumber *_gammaR;
+    NSNumber *_gammaG;
+    NSNumber *_gammaB;
+    
 }
 
-@property(nonatomic, copy) NSString *serverName;
+@property(nonatomic, copy) NSString    *serverName;
 @property(nonatomic, readonly) NSArray *availableDisplays;
-@property(nonatomic, strong) NSNumber *displayToUse;
-@property(nonatomic, strong) NSNumber *displayWidth;
-@property(nonatomic, strong) NSNumber *displayHeight;
-@property(nonatomic, strong) NSNumber *displayDistance;
-@property(nonatomic) BOOL alwaysDisplayMirrorWindow;
-@property(nonatomic, strong) NSNumber *mirrorWindowBaseHeight;
-@property(nonatomic) BOOL announceIndividualStimuli;
-@property(nonatomic) BOOL warnOnSkippedRefresh;
-@property(nonatomic) BOOL allowAltFailover;
-@property(nonatomic, readonly) BOOL highPrecisionClockAvailable;
-@property(nonatomic) BOOL useHighPrecisionClock;
+@property(nonatomic, strong) NSNumber  *displayToUse;
+@property(nonatomic, strong) NSNumber  *displayWidth;
+@property(nonatomic, strong) NSNumber  *displayHeight;
+@property(nonatomic, strong) NSNumber  *displayDistance;
+@property(nonatomic) BOOL               alwaysDisplayMirrorWindow;
+@property(nonatomic, strong) NSNumber  *mirrorWindowBaseHeight;
+@property(nonatomic) BOOL               announceIndividualStimuli;
+@property(nonatomic) BOOL               warnOnSkippedRefresh;
+@property(nonatomic) BOOL               allowAltFailover;
+@property(nonatomic, readonly) BOOL     highPrecisionClockAvailable;
+@property(nonatomic) BOOL               useHighPrecisionClock;
+
+@property(nonatomic, strong) NSNumber  *gammaR;
+@property(nonatomic, strong) NSNumber  *gammaG;
+@property(nonatomic, strong) NSNumber  *gammaB;
+
 
 @end

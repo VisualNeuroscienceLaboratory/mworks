@@ -16,8 +16,8 @@ EllipseMask::EllipseMask(const shared_ptr<Variable> &_size) : Mask(_size) {
 	// leave a 1 pixel border around the mask so when it clamps to the edge.  The array is initialized to all 
 	// zeros in the base constructor
 	for(unsigned int channel=0; channel<M_MASK_CHANNELS; ++channel) {
-		for(unsigned int row=1; row<current_size-1; ++row) {
-			for(unsigned int column=1; column<current_size-1; ++column) {
+		for(unsigned int row=0; row<current_size; ++row) {
+			for(unsigned int column=0; column<current_size; ++column) {
 				if( sqrt((((row-radius)*(row-radius)) + ((column-radius)*(column-radius)))) <= radius) {
 					data[channel+M_MASK_CHANNELS*current_size*row+M_MASK_CHANNELS*column] = 1.0;
 				}

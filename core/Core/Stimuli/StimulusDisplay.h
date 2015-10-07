@@ -106,6 +106,9 @@ BEGIN_NAMESPACE_MW
 		
         void glInit();
 		void setDisplayBounds();
+        void setGammaForStimulus();
+        void unsetGammaForStimulus();
+        void reportCurrentGamma();
         void refreshMainDisplay();
         void refreshMirrorDisplay(int contextIndex) const;
         void drawDisplayStack();
@@ -124,6 +127,10 @@ BEGIN_NAMESPACE_MW
                                             CVOptionFlags *flagsOut,
                                             void *_context);
 		
+        CGGammaValue old_minR, old_maxR, old_gammaR;
+        CGGammaValue old_minG, old_maxG, old_gammaG;
+        CGGammaValue old_minB, old_maxB, old_gammaB;
+        
     public:
         static void getDisplayBounds(const Datum &mainScreenInfo,
                                      GLdouble &left,

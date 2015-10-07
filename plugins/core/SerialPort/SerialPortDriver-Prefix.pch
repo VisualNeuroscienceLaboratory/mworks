@@ -1,0 +1,34 @@
+//
+//  SerialPortDriver-Prefix.pch
+//  SerialPortDriver
+//
+//  Created by VNL stimulus on 8/21/15.
+//  Copyright (c) 2015 New York University - Visual Neuroscience Lab. All rights reserved.
+//
+
+#ifndef SerialPortDriver_SerialPortDriver_Prefix_pch
+#define SerialPortDriver_SerialPortDriver_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __cplusplus
+
+#define BEGIN_NAMESPACE_MW_SerialPort_DRIVER BEGIN_NAMESPACE_MW BEGIN_NAMESPACE(SerialPort) BEGIN_NAMESPACE(driver)
+#define END_NAMESPACE_MW_SerialPort_DRIVER END_NAMESPACE(driver) END_NAMESPACE(SerialPort) END_NAMESPACE_MW
+
+
+#include <numeric>
+
+#include <boost/noncopyable.hpp>
+#include <boost/static_assert.hpp>
+
+#include <MWorksCore/IODevice.h>
+#include <MWorksCore/Plugin.h>
+#include <MWorksCore/StandardComponentFactory.h>
+#include <MWorksCore/TrialBuildingBlocks.h>
+
+#endif /* defined(__cplusplus) */
+
+#endif /* !defined(SerialPortDriver_SerialPortDriver_Prefix_pch) */
+

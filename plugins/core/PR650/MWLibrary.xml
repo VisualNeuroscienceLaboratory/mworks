@@ -1,0 +1,22 @@
+<MWElements>
+    
+    <MWElement name="PR650 Driver">
+        <match_signature>iodevice[@type="pr650_driver"]</match_signature>
+        <isa>IODevice</isa>
+        <icon>smallIOFolder</icon>
+        <description>
+            PR650 Driver. Synchronization Frequency is the frequency of device you're measuring (0 for a DC measurement). Integration time is in ms (use 0 for auto). Average Count is the number of samples to average before returning a value. Unit type is 0 for footLamberts (footcandles) or 1 for CD/m^2 (lux).
+        </description>
+        
+        <code>
+            <iodevice type="pr650_driver"
+            tag="PR650 Driver"
+            sync_frequency="0"
+            integration_time="0"
+            avg_cnt="1"
+            unit_type="1"
+            />
+        </code>
+    </MWElement>
+    
+</MWElements>
