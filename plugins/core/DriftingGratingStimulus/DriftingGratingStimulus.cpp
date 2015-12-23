@@ -5,6 +5,9 @@
  *  Created by bkennedy on 8/26/08.
  *  Copyright 2008 MIT. All rights reserved.
  *
+ *  Modified by romesh kumbhani on 09/15/2015
+ *  Copyright 2015 NYU. All rights reserved.
+ *
  */
 
 #include "DriftingGratingStimulus.h"

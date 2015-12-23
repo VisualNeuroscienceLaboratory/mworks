@@ -421,7 +421,7 @@
 				GCC_PREFIX_HEADER = DriftingGratingStimulusPlugin_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = DriftingGratingStimulusPlugin;
-				SDKROOT = macosx10.9;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Development;

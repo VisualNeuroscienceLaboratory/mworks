@@ -1,16 +1,16 @@
 /*
- *  WhiteNoiseUtilities.h
- *  WhiteNoiseStimulusPlugin
+ *  Utilities.h
+ *  StimulusPlugin
  *
  *  Created by bkennedy on 11/13/08.
- *  Copyright 2015 nyu. All rights reserved.
+ *  Copyright 2008 mit. All rights reserved.
  *
  */
 
-#ifndef WHITE_NOISE_UTILITIES_H
-#define WHITE_NOISE_UTILITIES_H
+#ifndef UTILITIES_H
+#define UTILITIES_H
 
-class WhiteNoiseUtilities {
+class Utilities {
 public:
 	static unsigned int getNextPowerOfTwo(unsigned int number);
 };

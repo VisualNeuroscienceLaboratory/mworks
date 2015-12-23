@@ -1,30 +1,59 @@
 /*
- *  GratingData.h
+ *  NoiseData.h
  *  WhiteNoiseStimulusPlugin
  *
- *  Created by bkennedy on 11/7/08.
+ *  Created by romesh kumbhani on 2015-10-07.
  *  Copyright 2015 nyu. All rights reserved.
  *
  */
 
-
-#ifndef GRATING_DATA_H
-#define GRATING_DATA_H
+#ifndef NOISE_DATA_H
+#define NOISE_DATA_H
 
 #include "MWorksCore/GenericVariable.h"
+
 using namespace mw;
 
-class GratingData {
+#define M_MASK_CHANNELS 2
+
+class NoiseData {
 protected:
-	shared_ptr <Variable> data_sample_rate;
-	GLfloat *data;
-	unsigned int current_data_size;
+	GLfloat                  *data;
+    uint                      datasize;
+    GLfloat                  *blockdata;
+    uint                      blockdatasize;
+
+    uint                      nsubchecks_x;
+    uint                      nsubchecks_y;
+    uint                      nchecks_x;
+    uint                      nchecks_y;
+    uint                      ntotalcols;
+    uint                      ntotalrows;
+
+    string                    dtype;
+    float                     dmu    = 0;
+    float                     drange = 1;
+    GLfloat                   getRandVal();
+    
+    uint                      fnum = 0;
+
 public:
-	GratingData(const shared_ptr <Variable> &_data_sample_size);
-	virtual ~GratingData();
-	virtual const GLfloat * get1DData() const;
-	virtual unsigned int getDataSize() const;
-	virtual const std::string getName() const = 0;
+    NoiseData(string distribution,
+              uint nsubchecks_x, uint nsubchecks_y,
+              uint nchecks_x, uint nchecks_y,
+              shared_ptr<Variable> seed,
+              float _dmu, float _drange);
+	virtual                  ~NoiseData();
+    virtual void              genNewData();
+	virtual const GLfloat    *getData() const;
+    virtual const GLfloat    *getBlockData() const;
+	virtual unsigned int      getSizeW() const;
+    virtual unsigned int      getSizeH() const;
+    virtual unsigned int      getSizeT() const;
+    virtual unsigned int      getSizeBT() const;
+    virtual unsigned int      getFrame() const;
+	virtual const string      getName() const;
 };
 
 #endif 
+

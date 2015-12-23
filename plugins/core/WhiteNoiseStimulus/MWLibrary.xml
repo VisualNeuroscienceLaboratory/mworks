@@ -1,5 +1,5 @@
 <MWElements>
-	<MWElement name="Drifting Grating Stimulus">
+	<MWElement name="White Noise Stimulus">
 		<!-- XPath 2.0 expression defining nodes of this type -->
 		<match_signature>stimulus[@type="white_noise"]</match_signature>
 		
@@ -11,26 +11,21 @@
 		
 		<!-- Payload -->
 		<code>
-			<stimulus type="white_noise" tag="New Drifting Grating"
-            grating_type="sinusoid"
-            mask="flattop8"
-            overlay_type="none"
-            x_size="1"
-            y_size="1"
+			<stimulus type="white_noise" tag="New White Noise"
+            noise="ternary"
+            mask="rectangle"
             x_position="0"
             y_position="0"
-            contrast="1"
-            opacity="1"
+            x_size="1"
+            y_size="1"
             rotation="0"
-            direction="0"
-            spatial_frequency="0"
-            temporal_frequency="1"
-            starting_phase="0"
-            o_rotation="0"
-            o_direction="0"
-            o_spatial_frequency="0"
-            o_temporal_frequency="1"
-            o_starting_phase="0"
+            opacity="1"
+            n_cols="51"
+            n_rows="51"
+            distrib_mu="0"
+            distrib_range="1"
+            nframes="3"
+            seed="0"
             autoplay="0"/>
         </code>
     </MWElement>

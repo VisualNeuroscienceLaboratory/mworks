@@ -1,6 +1,6 @@
 /*
- *  SinusoidWhiteNoiseMask.cpp
- *  WhiteNoiseStimulusPlugin
+ *  SinusoidMask.cpp
+ *  StimulusPlugin
  *
  *  Created by rdk on 7/10/15
  *  Copyright 2015 nyu. All rights reserved.

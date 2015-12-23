@@ -1,9 +1,9 @@
 /*
- *  WhiteNoiseMask.h
- *  WhiteNoiseStimulusPlugin
+ *  Mask.h
+ *  StimulusPlugin
  *
  *  Created by bkennedy on 11/7/08.
- *  Copyright 2015 nyu. All rights reserved.
+ *  Copyright 2008 mit. All rights reserved.
  *
  */
 
@@ -27,7 +27,7 @@ public:
 	Mask(const shared_ptr<Variable> &_size);
 	virtual ~Mask();
 	GLint getSize() const;
-	const GLfloat *get2DData() const;
+	const GLfloat *getData() const;
 	virtual const std::string getName() const = 0;
 };
 

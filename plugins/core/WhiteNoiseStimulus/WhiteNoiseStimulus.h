@@ -1,5 +1,10 @@
 /*
- GratingData.h, rdk 9/15/2015
+ *  WhiteNoiseStimulus.h
+ *  MWorksCore
+ *
+ *  Created by romesh kumbhani on 2015-10-07.
+ *  Copyright 2015 NYU. All rights reserved.
+ *
  */
 
 #ifndef WHITE_NOISE_STIMULUS_H
@@ -8,7 +13,7 @@
 #include <MWorksCore/StandardDynamicStimulus.h>
 
 #include "Mask.h"
-#include "GratingData.h"
+#include "NoiseData.h"
 
 using namespace mw;
 
@@ -16,45 +21,61 @@ using namespace mw;
 class WhiteNoiseStimulus : public StandardDynamicStimulus {
 
 private:
-    shared_ptr<GratingData> grating;
-    shared_ptr<Mask> mask;
-    vector<GLuint> grating_textures;
-    vector<GLuint> mask_textures;
+    shared_ptr<NoiseData>   noise;
+    shared_ptr<Mask>        mask;
+    vector<GLuint>          noise_textures;
+    vector<GLuint>          mask_textures;
+
+    string                  noise_str;
+    string                  mask_str;
+    
+    shared_ptr<Variable>    width;
+    shared_ptr<Variable>    height;
+    shared_ptr<Variable>    x_position;
+	shared_ptr<Variable>    y_position;
+    shared_ptr<Variable>    rotation;
+	
+    shared_ptr<Variable>    opacity;
+    shared_ptr<Variable>    nchecks_x;
+    shared_ptr<Variable>    nchecks_y;
+
+    shared_ptr<Variable>    distrib_mu;
+    shared_ptr<Variable>    distrib_range;
+    shared_ptr<Variable>    nframes;
+    shared_ptr<Variable>    seed;
+
+    CGDirectDisplayID       stimMonID;
+    float                   pixperdeg;
+    float                   degperpix;
+    uint                    curframe = 1;
+    
+    uint                    nsubchecks_x;
+    uint                    nsubchecks_y;
+    
+    float                   width_deg;
+    float                   height_deg;
     
     
-    shared_ptr<Variable> xoffset;
-	shared_ptr<Variable> yoffset;
-	shared_ptr<Variable> width;
-	shared_ptr<Variable> height;
-	
-    shared_ptr<Variable> contrast;
-    shared_ptr<Variable> opacity;
-	
-    shared_ptr<Variable> rotation;
-	shared_ptr<Variable> direction_in_degrees;
-	shared_ptr<Variable> spatial_frequency;
-    shared_ptr<Variable> temporal_frequency;
-	shared_ptr<Variable> starting_phase;
-	
-	float last_phase;
-    float o_last_phase;
+    
 
 public:
-    static const std::string GRATING_TYPE;
+    static const std::string NOISE;
     static const std::string MASK;
-
-    static const std::string GRATING_SAMPLE_RATE;
-    static const std::string INVERTED;
-    static const std::string STD_DEV;
-    static const std::string MEAN;
-
-    static const std::string CONTRAST;
-    static const std::string OPACITY;
     
-    static const std::string DIRECTION;
-    static const std::string SPATIAL_FREQUENCY;
-    static const std::string TEMPORAL_FREQUENCY;
-    static const std::string STARTING_PHASE;
+    static const std::string OPACITY;
+
+    static const std::string NCHECKS_X;
+    static const std::string NCHECKS_Y;
+    
+    static const std::string DISTRIB_MU;
+    static const std::string DISTRIB_RANGE;
+    
+    static const std::string NFRAMES;
+    static const std::string SEED;
+
+    // for use with Gaussian Masks:
+    static const std::string MEAN;
+    static const std::string STD_DEV;
     
     static void describeComponent(ComponentInfo &info);
     
@@ -63,6 +84,7 @@ public:
 	virtual ~WhiteNoiseStimulus() { }
 
 	virtual void load(shared_ptr<StimulusDisplay> display);
+    
 	virtual void unload(shared_ptr<StimulusDisplay> display);
     virtual void drawFrame(shared_ptr<StimulusDisplay> display);
 	virtual Datum getCurrentAnnounceDrawData();

@@ -1,15 +1,15 @@
 /*
- *  WhiteNoiseUtilities.cpp
- *  WhiteNoiseStimulusPlugin
+ *  Utilities.cpp
+ *  StimulusPlugin
  *
  *  Created by bkennedy on 11/13/08.
- *  Copyright 2015 nyu. All rights reserved.
+ *  Copyright 2008 mit. All rights reserved.
  *
  */
 
-#include "WhiteNoiseUtilities.h"
+#include "Utilities.h"
 
-unsigned int WhiteNoiseUtilities::getNextPowerOfTwo(unsigned int number) {
+unsigned int Utilities::getNextPowerOfTwo(unsigned int number) {
 	number--;
 	for (int i=1; i<sizeof(unsigned int)*8; i=i*2) {
 		number = number | number >> i;

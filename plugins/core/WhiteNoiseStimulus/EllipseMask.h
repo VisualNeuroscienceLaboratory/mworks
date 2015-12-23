@@ -1,9 +1,9 @@
 /*
- *  EllipseWhiteNoiseMask.h
- *  WhiteNoiseStimulusPlugin
+ *  EllipseMask.h
+ *  StimulusPlugin
  *
  *  Created by bkennedy on 11/7/08.
- *  Copyright 2015 nyu. All rights reserved.
+ *  Copyright 2008 mit. All rights reserved.
  *
  */
 

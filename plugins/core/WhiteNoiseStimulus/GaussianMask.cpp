@@ -1,9 +1,9 @@
 /*
- *  GaussianWhiteNoiseMask.cpp
- *  WhiteNoiseStimulusPlugin
+ *  GaussianMask.cpp
+ *  StimulusPlugin
  *
  *  Created by bkennedy on 11/13/08.
- *  Copyright 2015 nyu. All rights reserved.
+ *  Copyright 2008 mit. All rights reserved.
  *
  */
 

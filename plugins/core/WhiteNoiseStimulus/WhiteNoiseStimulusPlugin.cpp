@@ -2,7 +2,7 @@
  *  WhiteNoiseStimulusPlugins.cpp
  *  WhiteNoiseStimulusPlugins
  *
- *  Created by bkennedy on 8/14/08.
+ *  Created by romesh kumbhani on 2015-10-07.
  *  Copyright 2015 NYU. All rights reserved.
  *
  */
