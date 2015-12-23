@@ -1,3 +1,9 @@
 xcuserdata/
 *.pyc
 *.xccheckout
+
+xcode/MWorks/mworks/
+
+*.cpp
+
+plugins/core/DriftingGratingStimulus/DriftingGratingStimulusPlugin.xcodeproj/xcshareddata/xcschemes/DriftingGratingStimulusPlugin.xcscheme

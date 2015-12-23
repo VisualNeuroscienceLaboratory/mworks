@@ -1,11 +1,11 @@
-function [retval] = RSVPHist(data_struct, input)
+function [retval] = DriftingGratingHist(data_struct, input)
 
 if nargin == 1
     input.raster = struct([]);
     input.trialnum = ones(100,1);
     input.stimnumall = [];
-%    fprintf(2,'no argument \n');
-%    save ~/Desktop/RSVPHisttest.mat
+    fprintf(2,'no argument \n');
+    save ~/Desktop/DGHisttest.mat
 end
 
 % Find codes of relevant variables
@@ -31,27 +31,20 @@ stimstart = [];
 stimnum = [];
 stimnumall = input.stimnumall;
 for ind = 1:length(updateevents)
-    if length(updateevents(ind).data) > 1
-        if strncmp('OSImage',updateevents(ind).data{1}.name,7)
-            stimstart = [stimstart updateevents(ind).time_us./1000];%divide by 1000 to get spiketime in milliseconds
-            %fprintf(2,'%s\n',updateevents(ind).data{1}.name);
-            updateevents(ind).data{1}.name
-            updateevents(ind).data{1}.pos_x
-            updateevents(ind).data{1}.pos_y
-            updateevents(ind).time_us./1000
-            stimnum = [stimnum str2num(updateevents(ind).data{1}.name(findstr('_',updateevents(ind).data{1}.name)+1:end))];
-            stimnumall = [stimnumall str2num(updateevents(ind).data{1}.name(findstr('_',updateevents(ind).data{1}.name)+1:end))];
-        end
+    if length(updateevents(ind).data) >= 2
+        stimstart = [stimstart updateevents(ind).time_us./1000];%divide by 1000 to get spiketime in milliseconds
+        stimnum = [stimnum updateevents(ind).data{2}.direction/30];
+        stimnumall = [stimnumall updateevents(ind).data{2}.direction/30];
     end
 end
 
 
-if ((~ishandle(1)) | (nargin == 1))
+if ((~ishandle(1)) || (nargin == 1))
     figure(1);
-    for plotind = 1:100
-        ax(plotind) = subplot(10,10,plotind,'nextplot','add');
+    for plotind = 1:12
+        ax(plotind) = subplot(3,4,plotind,'nextplot','add');
         set(gca,'xticklabel',[]);
-        if plotind ~= 91
+        if plotind ~= 9
             set(gca,'yticklabel',[]);
         end
         set(gca,'xlim',[-150 300]);
@@ -62,13 +55,13 @@ if ((~ishandle(1)) | (nargin == 1))
         set(gca,'ticklength',[0.03 0.025]);
         set(gca,'color','none');
         set(gca,'Position',get(gca,'Outerposition'));
-        text(0.05,0.95,num2str(plotind-1),'units','normalized');
+        text(0.05,0.95,num2str(mod((plotind*30),360)),'units','normalized');
 
     end
-    set(ax(91),'xticklabel',[0 200]);
+    set(ax(9),'xticklabel',[0 200]);
     %set(ax(91),'yticklabel',[0 15]);
-    xlabel(ax(91),'Time (ms)');
-    ylabel(ax(91),'Trial #'); 
+    xlabel(ax(9),'Time (ms)');
+    ylabel(ax(9),'Trial #');
     linkaxes(ax,'y');
 else
     ax = input.ax;
@@ -81,17 +74,17 @@ raster = input.raster;
 trialnum = input.trialnum;
 binwidth = 25;
 timebins = [-150:binwidth:500];
-for histind = 1:length(stimstart)    
+for histind = 1:length(stimstart)
     stimspks = spiketimes(find(spiketimes >= stimstart(histind)-150 & spiketimes <= (stimstart(histind)+500)))-stimstart(histind);
     %plot(ax(stimnum(histind)),stimspks,trialnum(stimnum(histind)).*ones(size(stimspks)),'k*','MarkerSize',[2]);
     raster(trialnum(stimnum(histind)),stimnum(histind)).spiketimes = stimspks;
-    [N2,BIN] = histc(cast([raster(:,stimnum(histind)).spiketimes], 'double'),timebins);
+    [N2,BIN] = HISTC([raster(:,stimnum(histind)).spiketimes],timebins);
     if isempty(N2)
         N2 = zeros(length(timebins));
     end
     FR2 = (N2*1000)./(trialnum(stimnum(histind))*binwidth)
     if trialnum(stimnum(histind)) > 1
-        [N1,BIN] = histc(cast([raster(1:trialnum(stimnum(histind))-1,stimnum(histind)).spiketimes], 'double'),timebins);
+        [N1,BIN] = HISTC([raster(1:trialnum(stimnum(histind))-1,stimnum(histind)).spiketimes],timebins);
         if isempty(N1)
             N1 = zeros(length(timebins));
         end
@@ -107,7 +100,7 @@ for histind = 1:length(stimstart)
     plot(timebins+(binwidth./2),FR2,'k-');
     stimspks = [];
     trialnum(stimnum(histind)) = trialnum(stimnum(histind)) + 1;
-    text(0.05,0.95,num2str(stimnum(histind)-1),'units','normalized');
+    text(0.05,0.95,num2str(mod(stimnum(histind)*30,360)),'units','normalized');
     text(0.9,0.95,num2str(trialnum(stimnum(histind))),'units','normalized');
     clear N1 N2 FR1 FR2;
 end
