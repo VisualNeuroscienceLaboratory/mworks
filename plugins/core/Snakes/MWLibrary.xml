@@ -1,0 +1,30 @@
+<MWElements>
+	<MWElement name="Snakes Stimulus">
+		<!-- XPath 2.0 expression defining nodes of this type -->
+		<match_signature>stimulus[@type="snakes"]</match_signature>
+		
+		<isa>Stimulus</isa>
+		
+		<description>
+			A snake in the grass stimulus
+        </description>
+		
+		<!-- Payload -->
+		<code>
+			<stimulus type="snakes" tag="New Snakes"
+            x_position="0"
+            y_position="0"
+            x_size="1"
+            y_size="1"
+            rotation="0"
+            opacity="1"
+            line_width="0.1"
+            line_length="1.0"
+            shear_ang="0"
+            spacing=".5"
+            nsegments="7"
+            jitter="0"/>
+        </code>
+    </MWElement>
+</MWElements>
+
