@@ -1,0 +1,38 @@
+<MWElements>
+	<MWElement name="Drifting Texture Stimulus">
+		<!-- XPath 2.0 expression defining nodes of this type -->
+		<match_signature>stimulus[@type="drifting_texture"]</match_signature>
+		
+		<isa>Stimulus</isa>
+		
+		<description>
+			A drifting texture stimulus -
+        </description>
+		
+		<!-- Payload -->
+		<code>
+			<stimulus type="drifting_texture" tag="New Drifting Texture"
+            grating_type="sinusoid"
+            mask="flattop8"
+            overlay_type="none"
+            x_size="1"
+            y_size="1"
+            x_position="0"
+            y_position="0"
+            contrast="1"
+            opacity="1"
+            rotation="0"
+            direction="0"
+            spatial_frequency="0"
+            temporal_frequency="1"
+            starting_phase="0"
+            o_rotation="0"
+            o_direction="0"
+            o_spatial_frequency="0"
+            o_temporal_frequency="1"
+            o_starting_phase="0"
+            autoplay="0"/>
+        </code>
+    </MWElement>
+</MWElements>
+

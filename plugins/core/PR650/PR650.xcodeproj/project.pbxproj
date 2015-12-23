@@ -1,0 +1,289 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		942F5A841B87D5F70039767B /* MWLibrary.xml in Resources */ = {isa = PBXBuildFile; fileRef = 942F5A811B87D5F70039767B /* MWLibrary.xml */; };
+		942F5A8B1B87D6330039767B /* PR650DriverDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 942F5A881B87D6330039767B /* PR650DriverDevice.cpp */; };
+		942F5A8C1B87D6330039767B /* PR650DriverPlugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 942F5A8A1B87D6330039767B /* PR650DriverPlugin.cpp */; };
+		94849C621B87E350000BC0B7 /* PR650.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = E1D9A8F119D345F400F91003 /* PR650.bundle */; };
+		94849C671B8BC21D000BC0B7 /* measurement_data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94849C651B8BC21D000BC0B7 /* measurement_data.cpp */; };
+		94849C6E1B8BD2BA000BC0B7 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94849C6C1B8BD2BA000BC0B7 /* CoreFoundation.framework */; };
+		E1D9A91019D34A1E00F91003 /* MWorksCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D9A90F19D34A1E00F91003 /* MWorksCore.framework */; };
+		E1D9A91F19D354F100F91003 /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D9A91E19D354F100F91003 /* libboost_system.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E1D9A91A19D34F6400F91003 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(MW_PLUGINS_DIR)";
+			dstSubfolderSpec = 0;
+			files = (
+				94849C621B87E350000BC0B7 /* PR650.bundle in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		942F5A801B87D5F70039767B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		942F5A811B87D5F70039767B /* MWLibrary.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = MWLibrary.xml; sourceTree = SOURCE_ROOT; };
+		942F5A821B87D5F70039767B /* PR650Driver-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PR650Driver-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		942F5A881B87D6330039767B /* PR650DriverDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PR650DriverDevice.cpp; sourceTree = SOURCE_ROOT; };
+		942F5A891B87D6330039767B /* PR650DriverDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PR650DriverDevice.h; sourceTree = SOURCE_ROOT; };
+		942F5A8A1B87D6330039767B /* PR650DriverPlugin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PR650DriverPlugin.cpp; sourceTree = SOURCE_ROOT; };
+		94849C641B87EC5E000BC0B7 /* PR650DriverCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PR650DriverCommand.h; sourceTree = SOURCE_ROOT; };
+		94849C651B8BC21D000BC0B7 /* measurement_data.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = measurement_data.cpp; sourceTree = SOURCE_ROOT; };
+		94849C661B8BC21D000BC0B7 /* measurement_data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = measurement_data.h; sourceTree = SOURCE_ROOT; };
+		94849C6C1B8BD2BA000BC0B7 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = ../../../../../System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<group>"; };
+		E1D9A8F119D345F400F91003 /* PR650.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PR650.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1D9A90119D347E700F91003 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		E1D9A90219D347F400F91003 /* WARNING.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = WARNING.txt; sourceTree = "<group>"; };
+		E1D9A90F19D34A1E00F91003 /* MWorksCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MWorksCore.framework; path = /Library/Frameworks/MWorksCore.framework; sourceTree = "<absolute>"; };
+		E1D9A91E19D354F100F91003 /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = "/Library/Application Support/MWorks/Developer/lib/libboost_system.a"; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E1D9A8EE19D345F400F91003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1D9A91019D34A1E00F91003 /* MWorksCore.framework in Frameworks */,
+				E1D9A91F19D354F100F91003 /* libboost_system.a in Frameworks */,
+				94849C6E1B8BD2BA000BC0B7 /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E1A8E9B719F9477700571433 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		E1D9A8E819D345F400F91003 = {
+			isa = PBXGroup;
+			children = (
+				E1D9A90019D347A300F91003 /* External Config */,
+				E1D9A8F319D345F400F91003 /* PR650 */,
+				E1D9A91119D34A2800F91003 /* Frameworks */,
+				E1D9A8F219D345F400F91003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E1D9A8F219D345F400F91003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1D9A8F119D345F400F91003 /* PR650.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E1D9A8F319D345F400F91003 /* PR650 */ = {
+			isa = PBXGroup;
+			children = (
+				94849C641B87EC5E000BC0B7 /* PR650DriverCommand.h */,
+				942F5A891B87D6330039767B /* PR650DriverDevice.h */,
+				942F5A881B87D6330039767B /* PR650DriverDevice.cpp */,
+				94849C661B8BC21D000BC0B7 /* measurement_data.h */,
+				94849C651B8BC21D000BC0B7 /* measurement_data.cpp */,
+				942F5A8A1B87D6330039767B /* PR650DriverPlugin.cpp */,
+				E1A8E9B719F9477700571433 /* Actions */,
+				E1D9A8F419D345F400F91003 /* Supporting Files */,
+			);
+			name = PR650;
+			path = BlackrockLEDDriver;
+			sourceTree = "<group>";
+		};
+		E1D9A8F419D345F400F91003 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				942F5A801B87D5F70039767B /* Info.plist */,
+				942F5A811B87D5F70039767B /* MWLibrary.xml */,
+				942F5A821B87D5F70039767B /* PR650Driver-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E1D9A90019D347A300F91003 /* External Config */ = {
+			isa = PBXGroup;
+			children = (
+				E1D9A90119D347E700F91003 /* Development.xcconfig */,
+				E1D9A90219D347F400F91003 /* WARNING.txt */,
+			);
+			name = "External Config";
+			path = "/Library/Application Support/MWorks/Developer/Xcode";
+			sourceTree = "<absolute>";
+		};
+		E1D9A91119D34A2800F91003 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1D9A90F19D34A1E00F91003 /* MWorksCore.framework */,
+				94849C6C1B8BD2BA000BC0B7 /* CoreFoundation.framework */,
+				E1D9A91E19D354F100F91003 /* libboost_system.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E1D9A8F019D345F400F91003 /* PR650 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1D9A8F819D345F400F91003 /* Build configuration list for PBXNativeTarget "PR650" */;
+			buildPhases = (
+				E1D9A8ED19D345F400F91003 /* Sources */,
+				E1D9A8EE19D345F400F91003 /* Frameworks */,
+				E1D9A8EF19D345F400F91003 /* Resources */,
+				E1D9A91A19D34F6400F91003 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PR650;
+			productName = BlackrockLEDDriver;
+			productReference = E1D9A8F119D345F400F91003 /* PR650.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E1D9A8E919D345F400F91003 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "The MWorks Project";
+				TargetAttributes = {
+					E1D9A8F019D345F400F91003 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+				};
+			};
+			buildConfigurationList = E1D9A8EC19D345F400F91003 /* Build configuration list for PBXProject "PR650" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E1D9A8E819D345F400F91003;
+			productRefGroup = E1D9A8F219D345F400F91003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E1D9A8F019D345F400F91003 /* PR650 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E1D9A8EF19D345F400F91003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				942F5A841B87D5F70039767B /* MWLibrary.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E1D9A8ED19D345F400F91003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94849C671B8BC21D000BC0B7 /* measurement_data.cpp in Sources */,
+				942F5A8C1B87D6330039767B /* PR650DriverPlugin.cpp in Sources */,
+				942F5A8B1B87D6330039767B /* PR650DriverDevice.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E1D9A8F619D345F400F91003 /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1D9A90119D347E700F91003 /* Development.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				SDKROOT = macosx;
+			};
+			name = Development;
+		};
+		E1D9A8F919D345F400F91003 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PR650Driver-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/include,
+				);
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = "-headerpad_max_install_names";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "x86_64 i386";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Development;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E1D9A8EC19D345F400F91003 /* Build configuration list for PBXProject "PR650" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1D9A8F619D345F400F91003 /* Development */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		E1D9A8F819D345F400F91003 /* Build configuration list for PBXNativeTarget "PR650" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1D9A8F919D345F400F91003 /* Development */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E1D9A8E919D345F400F91003 /* Project object */;
+}

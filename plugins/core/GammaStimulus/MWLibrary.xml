@@ -1,0 +1,22 @@
+<MWElements>
+	<MWElement name="Gamma Stimulus">
+		<!-- XPath 2.0 expression defining nodes of this type -->
+		<match_signature>stimulus[@type="gamma"]</match_signature>
+		
+		<isa>Stimulus</isa>
+		
+		<description>
+			Set gamma parameters
+        </description>
+		
+		<!-- Payload -->
+		<code>
+			<stimulus type="gamma" tag="New Gamma Values"
+            r_gamma="2.2"
+            g_gamma="2.2"
+            b_gamma="2.2"
+            />
+        </code>
+    </MWElement>
+</MWElements>
+

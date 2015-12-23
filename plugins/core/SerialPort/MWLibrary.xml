@@ -1,0 +1,19 @@
+<MWElements>
+    <MWElement name="SerialPort Driver">
+        <match_signature>iodevice[@type="serialport_driver"]</match_signature>
+        <isa>IODevice</isa>
+        <icon>smallIOFolder</icon>
+        <description>
+            SerialPort Driver.
+        </description>
+        <code>
+            <iodevice type="serialport_driver"
+            tag="SerialPort Driver"
+            baud="9600"
+            bits="8"
+            parity="none"
+            stop_bit="1"
+            />
+        </code>
+    </MWElement>
+</MWElements>
